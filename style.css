@@ -1,0 +1,85 @@
+/** {
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+:root {
+    --primary-color: rgb(255, 203, 126);
+    --primary-color-darker: rgb(250, 203, 142);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 640px; /*largura maxima*/
+    margin:50px auto; /* distancia do topo da pagina 20, lateral auto*/
+    background: #fff;
+    padding: 20px; /*distancia entre oq esta dentro e a margem*/
+    border-radius: 5px;
+}
+
+.imc_informacoes{
+    display:flex;
+    margin-bottom:10px;
+}
+
+.imc_informacoes_resultado{
+    margin-left: 150px;
+}
+
+form input, form label, form button {
+    display:block; /*cada um em sua linha*/
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input{
+    font-size: 20px;
+    height: 40px; /*altura*/
+}
+
+form input:focus /*ao clicar muda a cor*/{
+    outline: 1px solid var(--primary-color);
+}
+
+form button {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700; /*negrito*/
+    height: 40px;
+    cursor: pointer; /*mudar cursor ao passar por cima*/
+    margin-top: 25px;
+}
+
+form button:hover /*quando passar por cima*/{
+    background: var(--primary-color-darker);
+
+}
+
+form button:active /*ao clicar e segurar*/{
+    background: rgb(36, 159, 175);
+}
+
+@media (max-width: 370px)
+{
+    .imc_informacoes{
+        display: block;
+    }
+    .imc_informacoes_resultado{
+        margin-left: 0px;
+      
+    }
+}
